@@ -2,7 +2,7 @@
  * @Description: release.js
  * @Author: wsy
  * @Date: 2021-12-29 19:34:07
- * @LastEditTime: 2021-12-30 19:19:06
+ * @LastEditTime: 2021-12-30 21:07:46
  * @LastEditors: wsy
  */
 import { execSync } from 'child_process'
@@ -18,6 +18,7 @@ if (oldVersion === version) {
   process.exit()
 }
 
-execSync('git add .', { stdio: 'inherit' })
-execSync(`git commit -m "chore: release v${version}"`, { stdio: 'inherit' })
-execSync(`git tag -a v${version} -m "v${version}"`, { stdio: 'inherit' })
+// execSync('git add .', { stdio: 'inherit' })
+execSync(`standard-version --release-as ${version}`, { stdio: 'inherit' })
+// execSync(`git commit -m "chore: release v${version}"`, { stdio: 'inherit' })
+// execSync(`git tag -a v${version} -m "v${version}"`, { stdio: 'inherit' })
