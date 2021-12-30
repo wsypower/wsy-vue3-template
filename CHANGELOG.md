@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.1.0](https://github.com/wsypower/vue-template/compare/v5.0.0...v5.1.0) (2021-12-30)
+
+
+### Bug Fixes
+
+* chore(release): 5.0.0 ([727b039](https://github.com/wsypower/vue-template/commit/727b039690326fea78d7b1fe4da0c3c68a6a2d01))
+
 ## [5.0.0](https://github.com/wsypower/vue-template/compare/v4.4.0...v5.0.0) (2021-12-30)
 
 ## [4.4.0](https://github.com/wsypower/vue-template/compare/v4.3.1...v4.4.0) (2021-12-30)
