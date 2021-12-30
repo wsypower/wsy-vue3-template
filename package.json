@@ -71,6 +71,7 @@
     "@types/rimraf": "^3.0.2",
     "@vitejs/plugin-vue": "^1.10.1",
     "@vue/compiler-sfc": "^3.2.23",
+    "boxen": "^6.2.1",
     "bumpp": "^7.1.1",
     "cfonts": "^2.10.0",
     "chalk": "5.0.0",
