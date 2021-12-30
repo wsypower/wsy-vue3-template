@@ -2,7 +2,7 @@
  * @Description: release.js
  * @Author: wsy
  * @Date: 2021-12-29 19:34:07
- * @LastEditTime: 2021-12-30 21:29:51
+ * @LastEditTime: 2021-12-30 21:31:44
  * @LastEditors: wsy
  */
 import path from 'path'
@@ -33,7 +33,7 @@ standardVersion({
       boxen(`${chalk('\n\n🎉  ')} ${chalk.green('project release success!\n')}`, {
         padding: 1,
         margin: 1,
-        borderStyle: 'double',
+        borderStyle: 'round',
         borderColor: 'green'
       })
     )
