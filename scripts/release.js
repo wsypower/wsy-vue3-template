@@ -30,7 +30,7 @@ standardVersion({
   .then(() => {
     // console.error('standard-version failed with message: ')
     console.log(
-      boxen(`${chalk('\n\n🎉🎉🎉  ')} ${chalk.green.bold('project release success!\n')}`, {
+      boxen(`${chalk('\n\n🎉 ')}${chalk.green.bold('project release success!\n')}`, {
         padding: 1,
         margin: 1,
         borderStyle: 'round',
