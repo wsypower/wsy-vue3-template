@@ -2,9 +2,10 @@
  * @Description: release.js
  * @Author: wsy
  * @Date: 2021-12-29 19:34:07
- * @LastEditTime: 2021-12-30 21:16:29
+ * @LastEditTime: 2021-12-30 21:18:45
  * @LastEditors: wsy
  */
+import path from 'path'
 import { execSync } from 'child_process'
 import { readJSONSync } from 'fs-extra'
 const standardVersion = require('standard-version')
@@ -21,7 +22,7 @@ if (oldVersion === version) {
 
 standardVersion({
   noVerify: true,
-  infile: 'docs/CHANGELOG.md',
+  infile: path.resolve('./CHANGELOG.md'),
   silent: true
 })
   .then((res) => {
