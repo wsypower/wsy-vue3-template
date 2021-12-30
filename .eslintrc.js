@@ -79,12 +79,12 @@ module.exports = {
   rules: {
     // 代码风格
     'block-spacing': [2, 'always'],
-    'no-console': [
-      'error',
-      {
-        allow: ['info', 'warn', 'error']
-      }
-    ],
+    // 'no-console': [
+    //   'error',
+    //   {
+    //     allow: ['info', 'warn', 'error']
+    //   }
+    // ],
     'no-debugger': ['warn'],
     'no-empty': ['warn'],
     'brace-style': [
