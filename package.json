@@ -73,7 +73,7 @@
     "@vue/compiler-sfc": "^3.2.23",
     "bumpp": "^7.1.1",
     "cfonts": "^2.10.0",
-    "chalk": "4",
+    "chalk": "5.0.0",
     "commitizen": "^4.2.4",
     "commitlint": "^11.0.0",
     "conventional-github-releaser": "^3.1.5",

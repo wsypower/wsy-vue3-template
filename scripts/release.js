@@ -2,12 +2,13 @@
  * @Description: release.js
  * @Author: wsy
  * @Date: 2021-12-29 19:34:07
- * @LastEditTime: 2021-12-30 21:18:45
+ * @LastEditTime: 2021-12-30 21:23:54
  * @LastEditors: wsy
  */
 import path from 'path'
 import { execSync } from 'child_process'
 import { readJSONSync } from 'fs-extra'
+import chalk from 'chalk'
 const standardVersion = require('standard-version')
 
 const { version: oldVersion } = readJSONSync('package.json')
@@ -25,9 +26,9 @@ standardVersion({
   infile: path.resolve('./CHANGELOG.md'),
   silent: true
 })
-  .then((res) => {
-    console.log('成功拉！！！', res)
-    // standard-version is done
+  .then(() => {
+    // console.error('standard-version failed with message: ')
+    console.log(chalk('\n\n🎉  ') + chalk.green('vite release success!\n'))
   })
   .catch((err) => {
     console.error(`standard-version failed with message: ${err.message}`)
