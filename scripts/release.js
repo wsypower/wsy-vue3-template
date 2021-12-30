@@ -2,7 +2,7 @@
  * @Description: release.js
  * @Author: wsy
  * @Date: 2021-12-29 19:34:07
- * @LastEditTime: 2021-12-30 22:02:23
+ * @LastEditTime: 2021-12-30 22:03:27
  * @LastEditors: wsy
  */
 import { execSync } from 'child_process'
@@ -30,7 +30,7 @@ standardVersion({
 })
   .then(() => {
     execSync('git push --follow-tags', { stdio: 'inherit' })
-    spinner.success('Git link successful!')
+    spinner.succeed('Git link successful!')
     // eslint-disable-next-line
     console.log(
       boxen(`${chalk('\n\n🎉 ')}${chalk.green.bold('project release success!\n')}`, {
@@ -44,8 +44,7 @@ standardVersion({
   .catch((err) => {
     spinner.fail('Git link failed!')
     console.error(
-      `${chalk.red('standard-version failed with message:')}
-      ${boxen(`${chalk('\n\n❌ ')}${chalk.red.bold(`${err.message}!\n`)}`, {
+      `${boxen(`${chalk('\n\n❌ ')}${chalk.red.bold(`${err.message}!\n`)}`, {
         padding: 1,
         margin: 1,
         borderStyle: 'round',
