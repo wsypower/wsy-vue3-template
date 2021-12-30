@@ -8,7 +8,6 @@
 <script setup>
   import { getElementLocales } from '@/locales'
   // import ReloadPrompt from '@/pwa/reloadPrompt.vue'
-
   const { proxy } = getCurrentInstance()
   const store = useStore()
   const route = useRoute()
