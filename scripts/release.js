@@ -2,7 +2,7 @@
  * @Description: release.js
  * @Author: wsy
  * @Date: 2021-12-29 19:34:07
- * @LastEditTime: 2021-12-30 21:37:37
+ * @LastEditTime: 2021-12-30 21:43:42
  * @LastEditors: wsy
  */
 import { execSync } from 'child_process'
@@ -22,7 +22,7 @@ if (oldVersion === version) {
 }
 
 standardVersion({
-  noVerify: true,
+  releaseAs: version,
   silent: true
 })
   .then(() => {
@@ -37,5 +37,5 @@ standardVersion({
     )
   })
   .catch((err) => {
-    console.error(`standard-version failed with message: ${err.message}`)
+    console.error(`${chalk.red.bold('standard-version failed with message:')} ${err.message}`)
   })
