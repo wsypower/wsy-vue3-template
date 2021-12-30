@@ -2,7 +2,7 @@
  * @Description: release.js
  * @Author: wsy
  * @Date: 2021-12-29 19:34:07
- * @LastEditTime: 2021-12-30 21:51:38
+ * @LastEditTime: 2021-12-30 21:54:35
  * @LastEditors: wsy
  */
 import { execSync } from 'child_process'
@@ -23,7 +23,7 @@ if (oldVersion === version) {
 
 standardVersion({
   releaseAs: version,
-  silent: false
+  silent: true
 })
   .then(() => {
     execSync('git push --follow-tags', { stdio: 'inherit' })
