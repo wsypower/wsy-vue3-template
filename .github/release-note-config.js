@@ -2,7 +2,7 @@
  * @Description:
  * @Author: wsy
  * @Date: 2021-12-30 17:15:52
- * @LastEditTime: 2021-12-30 18:43:59
+ * @LastEditTime: 2021-12-30 20:56:58
  * @LastEditors: wsy
  */
 module.exports = {
@@ -16,12 +16,11 @@ module.exports = {
     { types: ['perf'], label: '⚡ Performance Improvements | 性能优化' },
     { types: ['test'], label: '✅ Tests | 测试' },
     { types: ['revert'], label: '⏪ Revert | 回退' },
-    { types: ['build'], label: '📦‍ Build System | 打包构建' },
-    { types: ['chore'], label: '🚀 Chore | 构建/工程依赖/工具' },
+    { types: ['build'], label: '🚀 build | 构建/工程依赖/工具' },
     { types: ['ci'], label: '👷 Continuous Integration | CI 配置' }
   ],
 
-  excludeTypes: [],
+  excludeTypes: ['chore'],
 
   renderTypeSection: function (label, commits) {
     let text = `\n#### ${label}\n`

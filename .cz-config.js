@@ -2,7 +2,7 @@
  * @Description:
  * @Author: wsy
  * @Date: 2021-12-17 15:23:59
- * @LastEditTime: 2021-12-28 22:03:01
+ * @LastEditTime: 2021-12-30 20:51:38
  * @LastEditors: wsy
  */
 module.exports = {
@@ -18,9 +18,8 @@ module.exports = {
     },
     { value: 'perf', name: '⚡️ perf:     性能优化' },
     { value: 'test', name: '✅ test:     增加测试' },
-    { value: 'chore', name: '🔧 chore:    构建过程或辅助工具的变动' },
-    { value: 'build', name: '📦‍ build:    打包构建' },
     { value: 'revert', name: '⏪️ Revert:   回退' },
+    { value: 'build', name: '🚀‍ build:    构建过程或辅助工具的变动' },
     { value: 'ci', name: '👷 ci:       CI 配置' }
   ],
   // 消息步骤
