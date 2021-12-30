@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.5.0](https://github.com/wsypower/vue-template/compare/v3.3.1...v3.5.0) (2021-12-30)
+
+
+### Features
+
+* release success ([71c3145](https://github.com/wsypower/vue-template/commit/71c3145c3c73962b51e7d824364a91c73f9d27c5))
+
 ### [3.3.1](https://github.com/wsypower/vue-template/compare/v3.2.1...v3.3.1) (2021-12-30)
 
 ### [3.2.1](https://github.com/wsypower/vue-template/compare/v3.1.0...v3.2.1) (2021-12-30)
