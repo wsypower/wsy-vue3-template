@@ -1,0 +1,32 @@
+# https://github.com/marketplace/actions/standard-release-notes
+# https://github.com/marketplace/actions/pull-release-notes v1.0.2
+# https://github.com/marketplace/actions/format-release-notes
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+name: Create Release
+jobs:
+  release:
+    name: Create Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Create changelog text
+        id: changelog
+        uses: loopwerk/tag-changelog@v1
+        with:
+          token: ${{ secrets.GIT_TOKEN }}
+          config_file: .github/release-note-config.js
+
+      #  Create the release
+      - uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: ${{ github.ref }}
+          body: ${{ steps.changelog.outputs.changes }}
