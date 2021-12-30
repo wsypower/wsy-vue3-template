@@ -1,8 +1,8 @@
 /*
- * @Description: vite
+ * @Description: vite.config.js
  * @Author: wsy
  * @Date: 2021-11-30 10:34:48
- * @LastEditTime: 2021-12-30 20:58:39
+ * @LastEditTime: 2021-12-30 20:33:04
  * @LastEditors: wsy
  */
 import { defineConfig, loadEnv } from 'vite'
