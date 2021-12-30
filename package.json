@@ -21,7 +21,7 @@
     "shell:rm-git-merged": "./scripts/sh/git.rm.sh",
     "cz": "git-cz",
     "log": "conventional-changelog -p angular -i CHANGELOG.md -s",
-    "release": "esno scripts/release.js && git push --follow-tags",
+    "release": "esno scripts/release.js",
     "release-patch": "standard-version --release-as patch",
     "release-minor": "standard-version --release-as minor",
     "release-major": "standard-version --release-as major",
