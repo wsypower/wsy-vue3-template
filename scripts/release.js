@@ -2,7 +2,7 @@
  * @Description: release.js
  * @Author: wsy
  * @Date: 2021-12-29 19:34:07
- * @LastEditTime: 2021-12-30 21:31:44
+ * @LastEditTime: 2021-12-30 21:33:10
  * @LastEditors: wsy
  */
 import path from 'path'
@@ -30,7 +30,7 @@ standardVersion({
   .then(() => {
     // console.error('standard-version failed with message: ')
     console.log(
-      boxen(`${chalk('\n\n🎉  ')} ${chalk.green.bold('project release success!\n')}`, {
+      boxen(`${chalk('\n\n🎉🎉🎉  ')} ${chalk.green.bold('project release success!\n')}`, {
         padding: 1,
         margin: 1,
         borderStyle: 'round',
