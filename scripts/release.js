@@ -2,13 +2,14 @@
  * @Description: release.js
  * @Author: wsy
  * @Date: 2021-12-29 19:34:07
- * @LastEditTime: 2021-12-30 21:54:35
+ * @LastEditTime: 2021-12-30 21:58:17
  * @LastEditors: wsy
  */
 import { execSync } from 'child_process'
 import { readJSONSync } from 'fs-extra'
 import chalk from 'chalk'
 import boxen from 'boxen'
+import ora from 'ora'
 const standardVersion = require('standard-version')
 
 const { version: oldVersion } = readJSONSync('package.json')
@@ -20,6 +21,8 @@ const { version } = readJSONSync('package.json')
 if (oldVersion === version) {
   process.exit()
 }
+
+const spinner = ora('git upload ...').start()
 
 standardVersion({
   releaseAs: version,
@@ -47,4 +50,7 @@ standardVersion({
         borderColor: 'red'
       })} ${err.message}`
     )
+  })
+  .finally(() => {
+    spinner.stop()
   })
