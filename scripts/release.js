@@ -2,7 +2,7 @@
  * @Description: release.js
  * @Author: wsy
  * @Date: 2021-12-29 19:34:07
- * @LastEditTime: 2021-12-30 22:03:27
+ * @LastEditTime: 2022-01-04 14:38:35
  * @LastEditors: wsy
  */
 import { execSync } from 'child_process'
@@ -25,6 +25,7 @@ if (oldVersion === version) {
 const spinner = ora('Link to Git ...').start()
 
 standardVersion({
+  changelogHeader: 'wsy----version',
   releaseAs: version,
   silent: true
 })
