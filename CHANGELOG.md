@@ -1,6 +1,10 @@
-# Changelog
+wsy----version
+### [6.0.1](https://github.com/wsypower/vue-template/compare/v6.0.0...v6.0.1) (2022-01-04)
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### Bug Fixes
+
+* **changelog:** change ([664a638](https://github.com/wsypower/vue-template/commit/664a6381860e35737a4d65f717aeb9a974cbc251))
 
 ## [6.0.0](https://github.com/wsypower/vue-template/compare/v5.1.0...v6.0.0) (2021-12-30)
 
