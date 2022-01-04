@@ -2,7 +2,7 @@
  * @Description: release.js
  * @Author: wsy
  * @Date: 2021-12-29 19:34:07
- * @LastEditTime: 2022-01-04 14:40:55
+ * @LastEditTime: 2022-01-04 14:49:56
  * @LastEditors: wsy
  */
 import { execSync } from 'child_process'
@@ -12,20 +12,28 @@ import boxen from 'boxen'
 import ora from 'ora'
 const standardVersion = require('standard-version')
 
+// 读取现在的版本
 const { version: oldVersion } = readJSONSync('package.json')
 
+// 执行bumpp指令，更新版本号
 execSync('npx bumpp', { stdio: 'inherit' })
 
+// 读取更新后的版本号
 const { version } = readJSONSync('package.json')
 
+// 版本号如果没有变化，则退出
 if (oldVersion === version) {
   process.exit()
 }
 
+// 链接git仓库的动画
 const spinner = ora('Link to Git ...').start()
 
+/* =============================================
+=           生成版本CHANGELOG文件                =
+=============================================*/
+
 standardVersion({
-  // changelogHeader: '# Wsy-Admin ChangeLog\n\n',
   releaseAs: version,
   silent: true,
   header: '# Wsy-Admin ChangeLog\n\n',
@@ -45,8 +53,9 @@ standardVersion({
   ]
 })
   .then(() => {
+    // ─── SUCCESSFUL ──────────────────────────────────────────────────
     execSync('git push --follow-tags', { stdio: 'inherit' })
-    spinner.succeed('Git link successful!')
+    spinner.succeed('Git push successful!')
     // eslint-disable-next-line
     console.log(
       boxen(`${chalk('\n\n🎉 ')}${chalk.green.bold('project release success!\n')}`, {
@@ -58,7 +67,8 @@ standardVersion({
     )
   })
   .catch((err) => {
-    spinner.fail('Git link failed!')
+    // ─── FAILED ──────────────────────────────────────────────────────
+    spinner.fail('Git push failed!')
     console.error(
       `${boxen(`${chalk('\n\n❌ ')}${chalk.red.bold(`${err.message}!\n`)}`, {
         padding: 1,
