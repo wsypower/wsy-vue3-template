@@ -1,6 +1,13 @@
 # Wsy-Admin ChangeLog
 
 
+## [7.0.0](https://github.com/wsypower/vue-template/compare/v6.0.2...v7.0.0) (2022-01-04)
+
+
+### ✨ Features | 新功能
+
+* 修改release ([1292e95](https://github.com/wsypower/vue-template/commit/1292e959fc4af4248a11fe4399a227552c6c6669))
+
 ### [6.0.2](https://github.com/wsypower/vue-template/compare/v6.0.1...v6.0.2) (2022-01-04)
 
 
