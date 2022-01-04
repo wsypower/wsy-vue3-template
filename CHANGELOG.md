@@ -1,4 +1,13 @@
-wsy----version
+# Wsy-Admin ChangeLog
+
+
+### [6.0.2](https://github.com/wsypower/vue-template/compare/v6.0.1...v6.0.2) (2022-01-04)
+
+
+### 👷 Continuous Integration | CI 配置
+
+* release note ([5ad76fc](https://github.com/wsypower/vue-template/commit/5ad76fc86f02d1c133f0428802f5a3d01e156327))
+
 ### [6.0.1](https://github.com/wsypower/vue-template/compare/v6.0.0...v6.0.1) (2022-01-04)
 
 
